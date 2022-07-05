@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+
+<script>
+let n = 6, m = 7 ;
+
+let table = document.createElement('table')
+document.body.append(table)
+
+for (i=1;i<=n;i++) {
+    s = document.createElement("tr")
+for(j=1;j<=m;j++) {
+c= document.createElement('td')
+s.append(c)}
+ 
+table.append(s)}
+
+table.setAttribute('align', 'center')
+table.setAttribute('border','3px')
+table.setAttribute('bgcolor', 'cornflowerblue')
+table.setAttribute('width', '600px')
+table.setAttribute('height','600px')
+menu = document.querySelectorAll('td')
+
+t = 1
+for (index of menu){
+index.innerHTML = `Ячейка ${t}`
+index.className = 'td1'
+index.style.cssText = 'color:white; background:red ; border: 2px solid brown;'
+t++
+}
+
+function del1() {
+    for(index of menu)
+index.innerText = ""
+}
+
+function del2() {
+    for(index of menu)
+    index.remove()
+}
+
+
+function clear() {
+  while (table.firstChild) {
+    table.firstChild.remove();
+  }}
+setTimeout(del1, 2000);
+setTimeout(del2, 4000);
+setTimeout( clear, 6000);
+setTimeout(function() {table.remove()}, 8000);
+
+
+</script>
+
+</body>
+</html>
