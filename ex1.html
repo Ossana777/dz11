@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onclick="myEvent(event)">
+    
+<img id="img1"  src="world.gif" alt="">
+
+<script>
+
+function myEvent(e) {
+   x = Math.trunc(e.clientX+window.pageXOffset)
+  
+   y = Math.trunc(e.clientY+window.pageYOffset)
+   
+
+   if (990>x && x>910 && 190>y && y>180)
+   window.open('london.html','london','width=1000,height=1000')
+   else if (710>x && x>610 && 253>y && y>240)
+   window.open('newYork.html','newYork','width=1000,height=1000')
+   else if (1763>x && x>1697 && 291>y && y>275)
+   window.open('tokio.html','tokio','width=1000,height=1000')
+   
+// let s = "";
+// s += `
+// Тип события: ${e.type}
+// Источник события: ${e.srcElement.tagName}
+// Координата X: ${e.clientX+window.pageXOffset}, Координата Y: ${e.clientY+window.pageYOffset}`
+// alert (s)
+}
+
+
+</script>
+
+
+
+</body>
+</html>
